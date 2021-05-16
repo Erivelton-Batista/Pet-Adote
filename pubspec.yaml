@@ -45,9 +45,12 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/img/paw_icon.png
+    - assets/img/pata_termos_de_uso.png
+    - assets/img/img_perfil.jpg
+    - assets/img/fundo_teste.png
+    - assets/img/logo_app_pet_name.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -63,7 +66,7 @@ flutter:
   fonts:
   - family: KGred
     fonts:
-      - asset: fonts/KGRedHands.ttf
+      - asset: assets/fonts/KGRedHands.ttf
  
   #   - family: Trajan Pro
   #     fonts:

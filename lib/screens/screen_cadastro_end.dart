@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:pet_adote/screens/screen_cadastro_end.dart';
+import 'package:pet_adote/screens/screen_cadastro.dart';
 
-//Screen da tela de cadastro  de numero 7 e 8 do prototipo
-
-class Cadastro extends StatefulWidget {
+class Cadastro_end extends StatefulWidget {
   @override
-  _CadastroState createState() => _CadastroState();
+  _Cadastro_endState createState() => _Cadastro_endState();
 }
 
-class _CadastroState extends State<Cadastro> {
+class _Cadastro_endState extends State<Cadastro_end> {
+//variavel do checkbox para verificação
+  bool _sel = false;
+//mascara do campo CEP
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //barra da tela cadastro
       appBar: AppBar(
-        //barra da tela cadastro
         title: Center(
           child: Text(
             'Cadastro',
@@ -27,10 +29,10 @@ class _CadastroState extends State<Cadastro> {
         backgroundColor: Color(0xff2be0b5),
         toolbarHeight: 70,
       ),
-      //body cadastro com container
+      //body com o container
       body: Container(
         padding: EdgeInsets.only(
-          top: 8,
+          top: 60,
           left: 30,
           right: 30,
           bottom: 10,
@@ -38,76 +40,77 @@ class _CadastroState extends State<Cadastro> {
         child: Center(
           child: ListView(
             children: <Widget>[
-              //Foto do perfil
-              CircleAvatar(
-                child: Image.asset('assets/img/img_perfil.jpg'),
-                radius: 65,
-              ),
-
-              //Form de Nome completo
+              //Form de Estado
               TextFormField(
                 autofocus: true,
                 keyboardType: TextInputType.text,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
-                    labelText: "Nome completo",
+                    labelText: "Estado",
                     labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
               ),
-
-              //Form de E-mail
+              //Form de Cidade
               TextFormField(
                 autofocus: true,
                 keyboardType: TextInputType.text,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
-                  labelText: "E-mail",
-                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
-                ),
+                    labelText: "Cidade",
+                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
               ),
-
-              //Form de CPF
+              //Form de Bairro
+              TextFormField(
+                autofocus: true,
+                keyboardType: TextInputType.text,
+                style: new TextStyle(color: Colors.black, fontSize: 15),
+                decoration: InputDecoration(
+                    labelText: "Bairro",
+                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
+              ),
+              //Form de CEP
               TextFormField(
                 autofocus: true,
                 keyboardType: TextInputType.number,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
-                  labelText: "CPF",
-                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
-                ),
+                    labelText: "CEP",
+                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
               ),
-
-              //Form de Numero
+              //Form de Rua
+              TextFormField(
+                autofocus: true,
+                keyboardType: TextInputType.text,
+                style: new TextStyle(color: Colors.black, fontSize: 15),
+                decoration: InputDecoration(
+                    labelText: "Rua",
+                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
+              ),
+              //Form de Número da casa
               TextFormField(
                 autofocus: true,
                 keyboardType: TextInputType.number,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
-                  labelText: "Número Para Contato (Whatsapp)",
-                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
-                ),
+                    labelText: "Número",
+                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
               ),
-
-              //Form de Senha
-              TextFormField(
-                autofocus: true,
-                obscureText: true,
-                keyboardType: TextInputType.text,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
-                decoration: InputDecoration(
-                  labelText: "Senha",
-                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
-                ),
-              ),
-
-              //Form de E-mail
-              TextFormField(
-                autofocus: true,
-                obscureText: true,
-                keyboardType: TextInputType.text,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
-                decoration: InputDecoration(
-                  labelText: "Repetir senha",
-                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+              Divider(),
+              //checkbox
+              CheckboxListTile(
+                tileColor: Color.fromRGBO(190, 190, 190, 0.5),
+                value: _sel,
+                onChanged: (bool resp) {
+                  setState(() {
+                    _sel = resp;
+                  });
+                },
+                title: Text(
+                  "Aceito todos os termos de uso deste aplicativo",
+                  style: TextStyle(
+                    fontFamily: 'KGred',
+                    fontSize: 18,
+                    color: Colors.orangeAccent,
+                  ),
                 ),
               ),
               Divider(),
@@ -116,8 +119,8 @@ class _CadastroState extends State<Cadastro> {
                 height: 50.0,
                 child: RaisedButton(
                   onPressed: () => {
-                    Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (context) => Cadastro_end())),
+                    Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(builder: (context) => Cadastro())),
                   },
                   child: Icon(
                     Icons.pets,
