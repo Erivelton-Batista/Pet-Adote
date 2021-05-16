@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_adote/screens/screen_anuncios.dart';
+import 'package:pet_adote/screens/screen_cadastro_pet.dart';
 import 'screens/screen_cadastro.dart';
 import 'screens/screen_cadastro_end.dart';
 
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomeScreen(),
+      home: Cadastropet(),
     );
   }
 }

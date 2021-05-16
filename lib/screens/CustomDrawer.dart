@@ -25,7 +25,10 @@ class CustomDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.person),
-            title: Text("Seu perfil"),
+            title: Text(
+              "Seu perfil",
+              style: TextStyle(fontFamily: 'KGred'),
+            ),
             onTap: () {
               Navigator.pop(context);
             },
