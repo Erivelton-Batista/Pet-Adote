@@ -13,15 +13,14 @@ class _CadastroState extends State<Cadastro> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         //barra da tela cadastro
-        title: Center(
-          child: Text(
-            'Cadastro',
-            style: TextStyle(
-              fontFamily: 'KGred',
-              fontSize: 40,
-              color: Colors.orangeAccent,
-            ),
+        title: Text(
+          'Cadastro',
+          style: TextStyle(
+            fontFamily: 'KGred',
+            fontSize: 40,
+            color: Colors.orangeAccent,
           ),
         ),
         backgroundColor: Color(0xff2be0b5),
@@ -46,7 +45,7 @@ class _CadastroState extends State<Cadastro> {
 
               //Form de Nome completo
               TextFormField(
-                autofocus: true,
+                autofocus: false,
                 keyboardType: TextInputType.text,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
@@ -56,7 +55,7 @@ class _CadastroState extends State<Cadastro> {
 
               //Form de E-mail
               TextFormField(
-                autofocus: true,
+                autofocus: false,
                 keyboardType: TextInputType.text,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
@@ -67,7 +66,7 @@ class _CadastroState extends State<Cadastro> {
 
               //Form de CPF
               TextFormField(
-                autofocus: true,
+                autofocus: false,
                 keyboardType: TextInputType.number,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
@@ -78,7 +77,7 @@ class _CadastroState extends State<Cadastro> {
 
               //Form de Numero
               TextFormField(
-                autofocus: true,
+                autofocus: false,
                 keyboardType: TextInputType.number,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
@@ -89,7 +88,7 @@ class _CadastroState extends State<Cadastro> {
 
               //Form de Senha
               TextFormField(
-                autofocus: true,
+                autofocus: false,
                 obscureText: true,
                 keyboardType: TextInputType.text,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
@@ -101,7 +100,7 @@ class _CadastroState extends State<Cadastro> {
 
               //Form de E-mail
               TextFormField(
-                autofocus: true,
+                autofocus: false,
                 obscureText: true,
                 keyboardType: TextInputType.text,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
@@ -111,19 +110,37 @@ class _CadastroState extends State<Cadastro> {
                 ),
               ),
               Divider(),
+
               //Botao Cadastrar
               ButtonTheme(
                 height: 50.0,
                 child: RaisedButton(
+                  color: Color(0xff2be0b5),
                   onPressed: () => {
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
                         builder: (context) => Cadastro_end())),
                   },
-                  child: Icon(
-                    Icons.pets,
-                    size: 40,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Text(
+                        "Proximo",
+                        style: TextStyle(
+                          fontFamily: 'KGred',
+                          color: Colors.black,
+                          fontSize: 20,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                      Container(
+                        child: SizedBox(
+                          child: Image.asset('assets/img/paw_icon.png'),
+                          height: 28,
+                          width: 28,
+                        ),
+                      )
+                    ],
                   ),
-                  color: Color(0xff2be0b5),
                 ),
               ),
             ],

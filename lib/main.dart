@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:pet_adote/screens/screen_anuncios.dart';
-import 'package:pet_adote/screens/screen_cadastro_pet.dart';
-import 'screens/screen_cadastro.dart';
-import 'screens/screen_cadastro_end.dart';
+import 'package:flutter/services.dart';
+import 'package:pet_adote/screens/screen_splash_inicial.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     return MaterialApp(
-      home: Cadastropet(),
+      home: SplashHome(),
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pet_adote/screens/CustomDrawer.dart';
+import 'package:pet_adote/screens/screen_drawer.dart';
 import 'package:pet_adote/screens/screen_anuncios.dart';
 
 class Cadastropet extends StatefulWidget {
@@ -13,21 +13,22 @@ class _CadastropetState extends State<Cadastropet> {
     return Scaffold(
       //barra da tela cadastro de pet
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            'Cadastro pet',
-            style: TextStyle(
-              fontFamily: 'KGred',
-              fontSize: 30,
-              color: Colors.orangeAccent,
-            ),
+        centerTitle: true,
+        title: Text(
+          'Cadastro pet',
+          style: TextStyle(
+            fontFamily: 'KGred',
+            fontSize: 30,
+            color: Colors.orangeAccent,
           ),
         ),
         backgroundColor: Color(0xff2be0b5),
         toolbarHeight: 70,
       ),
+
       //drawer com o menu
       drawer: CustomDrawer(),
+
       //body cadastro com container
       body: Container(
         padding: EdgeInsets.only(
@@ -49,20 +50,32 @@ class _CadastropetState extends State<Cadastropet> {
               TextFormField(
                 autofocus: false,
                 keyboardType: TextInputType.text,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
+                style: new TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
                 decoration: InputDecoration(
                     labelText: "Nome",
-                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
+                    labelStyle: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15,
+                    )),
               ),
 
               //Form de Especie
               TextFormField(
                 autofocus: false,
                 keyboardType: TextInputType.text,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
+                style: new TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
                 decoration: InputDecoration(
                   labelText: "Espécie",
-                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
                 ),
               ),
 
@@ -70,10 +83,16 @@ class _CadastropetState extends State<Cadastropet> {
               TextFormField(
                 autofocus: false,
                 keyboardType: TextInputType.text,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
+                style: new TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
                 decoration: InputDecoration(
                   labelText: "Cor",
-                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
                 ),
               ),
 
@@ -81,10 +100,16 @@ class _CadastropetState extends State<Cadastropet> {
               TextFormField(
                 autofocus: false,
                 keyboardType: TextInputType.text,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
+                style: new TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
                 decoration: InputDecoration(
                   labelText: "Raça",
-                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
                 ),
               ),
 
@@ -92,10 +117,16 @@ class _CadastropetState extends State<Cadastropet> {
               TextFormField(
                 autofocus: false,
                 keyboardType: TextInputType.text,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
+                style: new TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
                 decoration: InputDecoration(
                   labelText: "Sexo",
-                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
                 ),
               ),
 
@@ -109,6 +140,7 @@ class _CadastropetState extends State<Cadastropet> {
                   labelStyle: TextStyle(color: Colors.black, fontSize: 15),
                 ),
               ),
+
               //Form de idade
               TextFormField(
                 autofocus: false,
@@ -120,6 +152,7 @@ class _CadastropetState extends State<Cadastropet> {
                 ),
               ),
               Divider(),
+
               //Form de breve descrição
               TextFormField(
                 maxLines: 5,
@@ -137,23 +170,38 @@ class _CadastropetState extends State<Cadastropet> {
                 ),
               ),
               Divider(),
+
               //Botao Cadastrar
               ButtonTheme(
                 height: 50.0,
                 child: RaisedButton(
+                  color: Color(0xff2be0b5),
+                  //Ação do botão
                   onPressed: () => {
                     Navigator.of(context).pushReplacement(
                         MaterialPageRoute(builder: (context) => HomeScreen())),
                   },
-                  child: Text(
-                    "Colocar para adoção",
-                    style: TextStyle(
-                      fontFamily: 'KGred',
-                      fontSize: 20,
-                      color: Colors.white,
-                    ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Text(
+                        "Colocar para adoção",
+                        style: TextStyle(
+                          fontFamily: 'KGred',
+                          color: Colors.black,
+                          fontSize: 20,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                      Container(
+                        child: SizedBox(
+                          child: Image.asset('assets/img/paw_icon.png'),
+                          height: 28,
+                          width: 28,
+                        ),
+                      )
+                    ],
                   ),
-                  color: Color(0xff2be0b5),
                 ),
               ),
             ],

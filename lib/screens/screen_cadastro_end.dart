@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pet_adote/screens/screen_cadastro.dart';
+import 'package:pet_adote/screens/screen_splash_fin_cadastro.dart';
 
 class Cadastro_end extends StatefulWidget {
   @override
@@ -16,19 +16,19 @@ class _Cadastro_endState extends State<Cadastro_end> {
     return Scaffold(
       //barra da tela cadastro
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            'Cadastro',
-            style: TextStyle(
-              fontFamily: 'KGred',
-              fontSize: 40,
-              color: Colors.orangeAccent,
-            ),
+        centerTitle: true,
+        title: Text(
+          'Cadastro',
+          style: TextStyle(
+            fontFamily: 'KGred',
+            fontSize: 40,
+            color: Colors.orangeAccent,
           ),
         ),
         backgroundColor: Color(0xff2be0b5),
         toolbarHeight: 70,
       ),
+
       //body com o container
       body: Container(
         padding: EdgeInsets.only(
@@ -42,52 +42,57 @@ class _Cadastro_endState extends State<Cadastro_end> {
             children: <Widget>[
               //Form de Estado
               TextFormField(
-                autofocus: true,
+                autofocus: false,
                 keyboardType: TextInputType.text,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
                     labelText: "Estado",
                     labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
               ),
+
               //Form de Cidade
               TextFormField(
-                autofocus: true,
+                autofocus: false,
                 keyboardType: TextInputType.text,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
                     labelText: "Cidade",
                     labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
               ),
+
               //Form de Bairro
               TextFormField(
-                autofocus: true,
+                autofocus: false,
                 keyboardType: TextInputType.text,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
                     labelText: "Bairro",
                     labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
               ),
+
               //Form de CEP
               TextFormField(
-                autofocus: true,
+                autofocus: false,
                 keyboardType: TextInputType.number,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
                     labelText: "CEP",
                     labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
               ),
+
               //Form de Rua
               TextFormField(
-                autofocus: true,
+                autofocus: false,
                 keyboardType: TextInputType.text,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
                     labelText: "Rua",
                     labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
               ),
+
               //Form de Número da casa
               TextFormField(
-                autofocus: true,
+                autofocus: false,
                 keyboardType: TextInputType.number,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
@@ -95,6 +100,7 @@ class _Cadastro_endState extends State<Cadastro_end> {
                     labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
               ),
               Divider(),
+
               //checkbox
               CheckboxListTile(
                 tileColor: Color.fromRGBO(190, 190, 190, 0.5),
@@ -114,19 +120,37 @@ class _Cadastro_endState extends State<Cadastro_end> {
                 ),
               ),
               Divider(),
+
               //Botao Cadastrar
               ButtonTheme(
                 height: 50.0,
                 child: RaisedButton(
-                  onPressed: () => {
-                    Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => Cadastro())),
-                  },
-                  child: Icon(
-                    Icons.pets,
-                    size: 40,
-                  ),
                   color: Color(0xff2be0b5),
+                  onPressed: () => {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (context) => Splash_Cadastro())),
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Text(
+                        "Finalizar Cadastro",
+                        style: TextStyle(
+                          fontFamily: 'KGred',
+                          color: Colors.black,
+                          fontSize: 20,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                      Container(
+                        child: SizedBox(
+                          child: Image.asset('assets/img/paw_icon.png'),
+                          height: 28,
+                          width: 28,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ],
