@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:pet_adote/screens/loading.dart';
 
-class Splash_Cadastro extends StatefulWidget {
+class Splash_atualizado extends StatefulWidget {
   @override
-  _Splash_CadastroState createState() => _Splash_CadastroState();
+  _Splash_atualizadoState createState() => _Splash_atualizadoState();
 }
 
-class _Splash_CadastroState extends State<Splash_Cadastro> {
+class _Splash_atualizadoState extends State<Splash_atualizado> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,16 +23,15 @@ class _Splash_CadastroState extends State<Splash_Cadastro> {
                 width: 250,
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                  image: AssetImage("assets/img/cão_caixa.png"),
+                  image: AssetImage("assets/img/gato.png"),
                   fit: BoxFit.contain,
                 )),
               ),
             ),
             Center(
               child: Text(
-                "PARABÉNS!\n"
-                "agora você faz parte\n"
-                "da família Pet adote.",
+                "Informações atualizadas\n"
+                "com sucesso\n",
                 style: TextStyle(
                   fontFamily: 'KGred',
                   fontSize: 20,
@@ -54,7 +53,8 @@ class _Splash_CadastroState extends State<Splash_Cadastro> {
     super.initState();
 
     Future.delayed(Duration(seconds: 5)).then((_) {
-      Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
+      Navigator.pushNamedAndRemoveUntil(
+          context, '/homescreen', (route) => false);
     });
   }
 }

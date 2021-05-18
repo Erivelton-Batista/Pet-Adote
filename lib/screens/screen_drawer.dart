@@ -69,11 +69,11 @@ class CustomDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.contacts),
             title: Text(
-              "Seus contatos",
+              "Atualizar contatos e endereço",
               style: TextStyle(fontFamily: 'KGred'),
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.pushNamed(context, '/atualizarcontato');
             },
           ),
 
@@ -85,8 +85,7 @@ class CustomDrawer extends StatelessWidget {
               style: TextStyle(fontFamily: 'KGred'),
             ),
             onTap: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => Login()));
+              Navigator.pushNamed(context, '/creditos');
             },
           ),
 

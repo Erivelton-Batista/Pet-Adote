@@ -1,38 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:pet_adote/screens/screen_splash_fin_cadastro.dart';
 
-class Cadastro_end extends StatefulWidget {
+class Atualizar_cadastro extends StatefulWidget {
   @override
-  _Cadastro_endState createState() => _Cadastro_endState();
+  _Atualizar_cadastroState createState() => _Atualizar_cadastroState();
 }
 
-class _Cadastro_endState extends State<Cadastro_end> {
-//variavel do checkbox para verificação
-  bool _sel = false;
-//mascara do campo CEP
-
+class _Atualizar_cadastroState extends State<Atualizar_cadastro> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //barra da tela cadastro
       appBar: AppBar(
         centerTitle: true,
+        //barra da tela cadastro
         title: Text(
-          'Cadastro',
+          'Contatos e Endereço',
           style: TextStyle(
             fontFamily: 'KGred',
-            fontSize: 40,
+            fontSize: 26,
             color: Colors.orangeAccent,
           ),
         ),
         backgroundColor: Color(0xff2be0b5),
         toolbarHeight: 70,
       ),
-
-      //body com o container
+      //body cadastro com container
       body: Container(
         padding: EdgeInsets.only(
-          top: 60,
+          top: 8,
           left: 30,
           right: 30,
           bottom: 10,
@@ -53,21 +47,23 @@ class _Cadastro_endState extends State<Cadastro_end> {
               //Form de Cidade
               TextFormField(
                 autofocus: false,
-                keyboardType: TextInputType.text,
+                keyboardType: TextInputType.number,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
-                    labelText: "Cidade",
-                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
+                  labelText: "Cidade",
+                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+                ),
               ),
 
               //Form de Bairro
               TextFormField(
                 autofocus: false,
-                keyboardType: TextInputType.text,
+                keyboardType: TextInputType.number,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
-                    labelText: "Bairro",
-                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
+                  labelText: "Bairro",
+                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+                ),
               ),
 
               //Form de Rua
@@ -76,65 +72,46 @@ class _Cadastro_endState extends State<Cadastro_end> {
                 keyboardType: TextInputType.text,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
-                    labelText: "Rua",
-                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
+                  labelText: "Rua",
+                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+                ),
               ),
 
-              //Form de Número da casa
+              //Form de Número
               TextFormField(
                 autofocus: false,
-                keyboardType: TextInputType.number,
+                obscureText: true,
+                keyboardType: TextInputType.text,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
-                    labelText: "Número",
-                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
+                  labelText: "Número",
+                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+                ),
               ),
 
-              //Form de CEP
+              //Form de Telefone
               TextFormField(
                 autofocus: false,
-                keyboardType: TextInputType.number,
+                obscureText: true,
+                keyboardType: TextInputType.text,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
-                    labelText: "CEP",
-                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
+                  labelText: "Telefone (Whatsapp)",
+                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+                ),
               ),
 
-              Divider(),
-
-              //botao e checkbox
-              Row(
-                children: <Widget>[
-                  ButtonTheme(
-                    height: 60,
-                    child: RaisedButton(
-                      onPressed: () => {
-                        Navigator.pushNamed(context, '/termouso'),
-                      },
-                      color: Color.fromRGBO(211, 211, 211, 1),
-                      child: Text(
-                        "Aceito Todos os termos\n" "uso deste aplicativo",
-                        style: TextStyle(
-                          fontFamily: 'KGred',
-                          color: Colors.orangeAccent,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  //checkbox
-                  Checkbox(
-                    value: _sel,
-                    onChanged: (bool resp) {
-                      setState(() {
-                        _sel = resp;
-                      });
-                    },
-                  ),
-                ],
+              //Form de e-mail
+              TextFormField(
+                autofocus: false,
+                obscureText: true,
+                keyboardType: TextInputType.text,
+                style: new TextStyle(color: Colors.black, fontSize: 15),
+                decoration: InputDecoration(
+                  labelText: "E-mail",
+                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+                ),
               ),
-
               Divider(),
 
               //Botao Cadastrar
@@ -142,14 +119,15 @@ class _Cadastro_endState extends State<Cadastro_end> {
                 height: 50.0,
                 child: RaisedButton(
                   color: Color(0xff2be0b5),
+                  //ação ao apertar o botao
                   onPressed: () => {
-                    Navigator.pushReplacementNamed(context, '/splashcadastro'),
+                    Navigator.pushNamed(context, '/splashatualizado'),
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Text(
-                        "Finalizar Cadastro",
+                        "Atualizar",
                         style: TextStyle(
                           fontFamily: 'KGred',
                           color: Colors.black,

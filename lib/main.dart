@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:pet_adote/screens/screen_anuncios.dart';
+import 'package:pet_adote/screens/screen_atualizar_contato.dart';
 import 'package:pet_adote/screens/screen_cadastro.dart';
 import 'package:pet_adote/screens/screen_cadastro_end.dart';
 import 'package:pet_adote/screens/screen_cadastro_pet.dart';
+import 'package:pet_adote/screens/screen_creditos.dart';
 import 'package:pet_adote/screens/screen_login.dart';
 import 'package:pet_adote/screens/screen_recuperar_senha.dart';
+import 'package:pet_adote/screens/screen_splash_cadastro_atualizado.dart';
 import 'package:pet_adote/screens/screen_splash_fin_cadastro.dart';
 import 'package:pet_adote/screens/screen_splash_inicial.dart';
 import 'package:pet_adote/screens/screen_splash_recuperar_senha.dart';
@@ -28,6 +31,9 @@ void main() {
         '/cadastropet': (context) => Cadastropet(),
         '/splashadocao': (context) => Splash_adocao(),
         '/termouso': (context) => Termo_uso(),
+        '/atualizarcontato': (context) => Atualizar_cadastro(),
+        '/splashatualizado': (context) => Splash_atualizado(),
+        '/creditos': (context) => Creditos(),
       },
     ),
   );
