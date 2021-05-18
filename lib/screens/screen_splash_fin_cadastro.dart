@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flare_flutter/flare_actor.dart';
+import 'package:pet_adote/screens/loading.dart';
 import 'package:pet_adote/screens/screen_login.dart';
 
 class Splash_Cadastro extends StatefulWidget {
@@ -43,17 +44,7 @@ class _Splash_CadastroState extends State<Splash_Cadastro> {
               ),
             ),
             //loading do splash
-            Center(
-              child: Container(
-                width: 200,
-                height: 200,
-                child: FlareActor(
-                  "assets/img/loading.flr",
-                  animation: "loading",
-                  fit: BoxFit.contain,
-                ),
-              ),
-            )
+            Center(child: CustomLoading()),
           ],
         )
       ]),

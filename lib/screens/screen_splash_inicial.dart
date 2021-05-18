@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flare_flutter/flare_actor.dart';
+import 'package:pet_adote/screens/loading.dart';
 import 'package:pet_adote/screens/screen_login.dart';
 
 class SplashHome extends StatefulWidget {
@@ -30,17 +31,7 @@ class _SplashHomeState extends State<SplashHome> {
               ),
             ),
             //loading do splash
-            Center(
-              child: Container(
-                width: 200,
-                height: 200,
-                child: FlareActor(
-                  "assets/img/loading.flr",
-                  animation: "loading",
-                  fit: BoxFit.contain,
-                ),
-              ),
-            )
+            Center(child: CustomLoading()),
           ],
         )
       ]),

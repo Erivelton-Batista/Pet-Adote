@@ -1,5 +1,6 @@
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
+import 'package:pet_adote/screens/loading.dart';
 
 class Splash_recupera_senha extends StatefulWidget {
   @override
@@ -41,17 +42,7 @@ class _Splash_recupera_senhaState extends State<Splash_recupera_senha> {
               ),
             ),
             //loading do splash
-            Center(
-              child: Container(
-                width: 200,
-                height: 200,
-                child: FlareActor(
-                  "assets/img/loading.flr",
-                  animation: "loading",
-                  fit: BoxFit.contain,
-                ),
-              ),
-            )
+            Center(child: CustomLoading()),
           ],
         )
       ]),

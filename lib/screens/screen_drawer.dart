@@ -103,6 +103,10 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
 
+          SizedBox(
+            height: 85,
+          ),
+
           //botao de por para adotar os pets
           Container(
             height: 70,
