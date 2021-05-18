@@ -70,16 +70,6 @@ class _Cadastro_endState extends State<Cadastro_end> {
                     labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
               ),
 
-              //Form de CEP
-              TextFormField(
-                autofocus: false,
-                keyboardType: TextInputType.number,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
-                decoration: InputDecoration(
-                    labelText: "CEP",
-                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
-              ),
-
               //Form de Rua
               TextFormField(
                 autofocus: false,
@@ -99,26 +89,52 @@ class _Cadastro_endState extends State<Cadastro_end> {
                     labelText: "Número",
                     labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
               ),
+
+              //Form de CEP
+              TextFormField(
+                autofocus: false,
+                keyboardType: TextInputType.number,
+                style: new TextStyle(color: Colors.black, fontSize: 15),
+                decoration: InputDecoration(
+                    labelText: "CEP",
+                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
+              ),
+
               Divider(),
 
               //checkbox
-              CheckboxListTile(
-                tileColor: Color.fromRGBO(190, 190, 190, 0.5),
-                value: _sel,
-                onChanged: (bool resp) {
-                  setState(() {
-                    _sel = resp;
-                  });
-                },
-                title: Text(
-                  "Aceito todos os termos de uso deste aplicativo",
-                  style: TextStyle(
-                    fontFamily: 'KGred',
-                    fontSize: 18,
-                    color: Colors.orangeAccent,
+              Row(
+                children: <Widget>[
+                  ButtonTheme(
+                    height: 60,
+                    child: RaisedButton(
+                      onPressed: () => {
+                        Navigator.pushNamed(context, '/cadastro'),
+                      },
+                      color: Color.fromRGBO(211, 211, 211, 1),
+                      child: Text(
+                        "Aceito Todos os termos\n" "uso deste aplicativo",
+                        style: TextStyle(
+                          fontFamily: 'KGred',
+                          color: Colors.orangeAccent,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
                   ),
-                ),
+
+                  //checkbox
+                  Checkbox(
+                    value: _sel,
+                    onChanged: (bool resp) {
+                      setState(() {
+                        _sel = resp;
+                      });
+                    },
+                  ),
+                ],
               ),
+
               Divider(),
 
               //Botao Cadastrar
@@ -127,8 +143,7 @@ class _Cadastro_endState extends State<Cadastro_end> {
                 child: RaisedButton(
                   color: Color(0xff2be0b5),
                   onPressed: () => {
-                    Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (context) => Splash_Cadastro())),
+                    Navigator.pushReplacementNamed(context, '/splashcadastro'),
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -31,9 +31,9 @@ class _Splash_CadastroState extends State<Splash_Cadastro> {
             ),
             Center(
               child: Text(
-                "PARABÈNS\n"
+                "PARABÉNS!\n"
                 "agora você faz parte\n"
-                "da familia Pet adote.",
+                "da família Pet adote.",
                 style: TextStyle(
                   fontFamily: 'KGred',
                   fontSize: 20,
@@ -65,8 +65,7 @@ class _Splash_CadastroState extends State<Splash_Cadastro> {
     super.initState();
 
     Future.delayed(Duration(seconds: 5)).then((_) {
-      Navigator.of(context)
-          .pushReplacement(MaterialPageRoute(builder: (context) => Login()));
+      Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
     });
   }
 }

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pet_adote/screens/screen_login.dart';
-import 'package:pet_adote/screens/screen_splash_recuperar_senha.dart';
 
 class Recuperar_senha extends StatefulWidget {
   @override
@@ -37,7 +35,7 @@ class _Recuperar_senhaState extends State<Recuperar_senha> {
           children: <Widget>[
             //texto informe seu email
             Text(
-              "Informe seu Email",
+              "Informe seu E-mail",
               style: TextStyle(
                 fontFamily: 'KGred',
                 fontSize: 18,
@@ -64,7 +62,7 @@ class _Recuperar_senhaState extends State<Recuperar_senha> {
 
             //sizebox para espaçamento
             SizedBox(
-              height: 280,
+              height: 370,
             ),
 
             //Botao Recuperar Senha
@@ -74,53 +72,14 @@ class _Recuperar_senhaState extends State<Recuperar_senha> {
                 color: Color(0xff2be0b5),
                 //Ação do Botao
                 onPressed: () => {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => Splash_recupera_senha())),
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/splashrecuperar', (route) => false),
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text(
                       "Recuperar Senha",
-                      style: TextStyle(
-                        fontFamily: 'KGred',
-                        color: Colors.black,
-                        fontSize: 20,
-                      ),
-                      textAlign: TextAlign.left,
-                    ),
-                    Container(
-                      child: SizedBox(
-                        child: Image.asset('assets/img/paw_icon.png'),
-                        height: 28,
-                        width: 28,
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-
-            //sizebox para espaçamento
-            SizedBox(
-              height: 30,
-            ),
-
-            //Botao Voltar tela de login
-            ButtonTheme(
-              height: 50.0,
-              child: RaisedButton(
-                color: Color(0xff2be0b5),
-                //Ação do Botao
-                onPressed: () => {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => Login())),
-                },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text(
-                      "Voltar para o Login",
                       style: TextStyle(
                         fontFamily: 'KGred',
                         color: Colors.black,

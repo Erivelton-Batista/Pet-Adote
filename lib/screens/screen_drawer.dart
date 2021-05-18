@@ -37,7 +37,7 @@ class CustomDrawer extends StatelessWidget {
               style: TextStyle(fontFamily: 'KGred'),
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.pushNamed(context, 'routeName');
             },
           ),
 
@@ -61,7 +61,7 @@ class CustomDrawer extends StatelessWidget {
               style: TextStyle(fontFamily: 'KGred'),
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.pushNamed(context, '/termouso');
             },
           ),
 
@@ -81,7 +81,7 @@ class CustomDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.article_outlined),
             title: Text(
-              "Creditos",
+              "Créditos",
               style: TextStyle(fontFamily: 'KGred'),
             ),
             onTap: () {
@@ -98,8 +98,8 @@ class CustomDrawer extends StatelessWidget {
               style: TextStyle(fontFamily: 'KGred'),
             ),
             onTap: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => Login()));
+              Navigator.pushNamedAndRemoveUntil(
+                  context, '/login', (route) => false);
             },
           ),
 
@@ -110,14 +110,13 @@ class CustomDrawer extends StatelessWidget {
               color: Colors.orangeAccent,
               //Ação do botão
               onPressed: () => {
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => Cadastropet())),
+                Navigator.pushNamed(context, '/cadastropet'),
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text(
-                    "Colocar um Pet\n" "para Doação",
+                    "Colocar um Pet\n" "para Adoação",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontFamily: 'KGred',

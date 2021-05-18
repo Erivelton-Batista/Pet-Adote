@@ -27,7 +27,7 @@ class _CadastropetState extends State<Cadastropet> {
       ),
 
       //drawer com o menu
-      drawer: CustomDrawer(),
+      //drawer: CustomDrawer(),
 
       //body cadastro com container
       body: Container(
@@ -178,8 +178,8 @@ class _CadastropetState extends State<Cadastropet> {
                   color: Color(0xff2be0b5),
                   //Ação do botão
                   onPressed: () => {
-                    Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => HomeScreen())),
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, '/splashadocao', (route) => false)
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

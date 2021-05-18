@@ -1,12 +1,12 @@
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 
-class Splash_recupera_senha extends StatefulWidget {
+class Splash_adocao extends StatefulWidget {
   @override
-  _Splash_recupera_senhaState createState() => _Splash_recupera_senhaState();
+  _Splash_adocaoState createState() => _Splash_adocaoState();
 }
 
-class _Splash_recupera_senhaState extends State<Splash_recupera_senha> {
+class _Splash_adocaoState extends State<Splash_adocao> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,15 +23,20 @@ class _Splash_recupera_senhaState extends State<Splash_recupera_senha> {
                 width: 250,
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                  image: AssetImage("assets/img/recuperar_senha.png"),
+                  image: AssetImage("assets/img/pata_termos_de_uso.png"),
                   fit: BoxFit.contain,
                 )),
               ),
             ),
+
+            SizedBox(
+              height: 30,
+            ),
+
             Center(
               child: Text(
-                "Sua Senha foi enviada\n"
-                "para o e-mail cadastrado\n",
+                "Seu Pet foi colocado\n"
+                "para adoção\n",
                 style: TextStyle(
                   fontFamily: 'KGred',
                   fontSize: 20,
@@ -63,7 +68,8 @@ class _Splash_recupera_senhaState extends State<Splash_recupera_senha> {
     super.initState();
 
     Future.delayed(Duration(seconds: 5)).then((_) {
-      Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
+      Navigator.pushNamedAndRemoveUntil(
+          context, '/homescreen', (route) => false);
     });
   }
 }

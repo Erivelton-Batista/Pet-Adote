@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pet_adote/screens/screen_anuncios.dart';
-import 'package:pet_adote/screens/screen_cadastro.dart';
-import 'package:pet_adote/screens/screen_recuperar_senha.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -79,9 +77,9 @@ class Login extends StatelessWidget {
                     fontFamily: 'KGred',
                   ),
                 ),
+                //ação do botao
                 onPressed: () => {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => Recuperar_senha())),
+                  Navigator.pushNamed(context, '/recuperarsenha'),
                 },
               ),
             ),
@@ -96,9 +94,10 @@ class Login extends StatelessWidget {
               height: 50.0,
               child: RaisedButton(
                 color: Color(0xff2be0b5),
+                //ação do botao
                 onPressed: () => {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => HomeScreen())),
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/homescreen', (route) => false),
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -131,18 +130,17 @@ class Login extends StatelessWidget {
               alignment: Alignment.center,
               child: FlatButton(
                 child: Text(
-                  "Quer doar ou adotar?\n" "Cadastre-se",
+                  "Para doar ou adotar\n" "Cadastre-se",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black,
                     fontFamily: 'KGred',
                     fontSize: 16,
-                    decoration: TextDecoration.underline,
                   ),
                 ),
+                //ação ao aperta o botao
                 onPressed: () => {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => Cadastro())),
+                  Navigator.pushNamed(context, '/cadastro'),
                 },
               ),
             ),

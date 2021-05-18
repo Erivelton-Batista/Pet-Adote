@@ -57,6 +57,7 @@ flutter:
     - assets/img/cão_caixa.png
     - assets/img/recuperar_senha.png
     - assets/img/adocao_icon.png
+    - assets/img/icon_busca.png
     
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

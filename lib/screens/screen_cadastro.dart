@@ -53,17 +53,6 @@ class _CadastroState extends State<Cadastro> {
                     labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
               ),
 
-              //Form de E-mail
-              TextFormField(
-                autofocus: false,
-                keyboardType: TextInputType.text,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
-                decoration: InputDecoration(
-                  labelText: "E-mail",
-                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
-                ),
-              ),
-
               //Form de CPF
               TextFormField(
                 autofocus: false,
@@ -81,7 +70,18 @@ class _CadastroState extends State<Cadastro> {
                 keyboardType: TextInputType.number,
                 style: new TextStyle(color: Colors.black, fontSize: 15),
                 decoration: InputDecoration(
-                  labelText: "Número Para Contato (Whatsapp)",
+                  labelText: "Telefone (Whatsapp)",
+                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+                ),
+              ),
+
+              //Form de E-mail
+              TextFormField(
+                autofocus: false,
+                keyboardType: TextInputType.text,
+                style: new TextStyle(color: Colors.black, fontSize: 15),
+                decoration: InputDecoration(
+                  labelText: "E-mail",
                   labelStyle: TextStyle(color: Colors.black, fontSize: 15),
                 ),
               ),
@@ -98,7 +98,7 @@ class _CadastroState extends State<Cadastro> {
                 ),
               ),
 
-              //Form de E-mail
+              //Form de Repetir senha
               TextFormField(
                 autofocus: false,
                 obscureText: true,
@@ -116,15 +116,15 @@ class _CadastroState extends State<Cadastro> {
                 height: 50.0,
                 child: RaisedButton(
                   color: Color(0xff2be0b5),
+                  //ação ao apertar o botao
                   onPressed: () => {
-                    Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (context) => Cadastro_end())),
+                    Navigator.pushNamed(context, '/cadastro2'),
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Text(
-                        "Proximo",
+                        "Próximo",
                         style: TextStyle(
                           fontFamily: 'KGred',
                           color: Colors.black,

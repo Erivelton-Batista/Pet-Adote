@@ -52,8 +52,7 @@ class _SplashHomeState extends State<SplashHome> {
     super.initState();
 
     Future.delayed(Duration(seconds: 5)).then((_) {
-      Navigator.of(context)
-          .pushReplacement(MaterialPageRoute(builder: (context) => Login()));
+      Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
     });
   }
 }
