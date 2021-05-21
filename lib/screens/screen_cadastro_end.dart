@@ -18,10 +18,10 @@ class _Cadastro_endState extends State<Cadastro_end> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'Cadastro',
+          'Cadastro de usuário',
           style: TextStyle(
             fontFamily: 'KGred',
-            fontSize: 40,
+            fontSize: 26,
             color: Colors.orangeAccent,
           ),
         ),

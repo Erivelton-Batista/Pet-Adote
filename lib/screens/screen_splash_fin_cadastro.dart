@@ -23,7 +23,7 @@ class _Splash_CadastroState extends State<Splash_Cadastro> {
                 width: 250,
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                  image: AssetImage("assets/img/cão_caixa.png"),
+                  image: AssetImage("assets/img/gato.png"),
                   fit: BoxFit.contain,
                 )),
               ),

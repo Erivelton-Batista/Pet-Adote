@@ -5,7 +5,9 @@ import 'package:pet_adote/screens/screen_cadastro.dart';
 import 'package:pet_adote/screens/screen_cadastro_end.dart';
 import 'package:pet_adote/screens/screen_cadastro_pet.dart';
 import 'package:pet_adote/screens/screen_creditos.dart';
+import 'package:pet_adote/screens/screen_filtros.dart';
 import 'package:pet_adote/screens/screen_login.dart';
+import 'package:pet_adote/screens/screen_perfil_pet.dart';
 import 'package:pet_adote/screens/screen_recuperar_senha.dart';
 import 'package:pet_adote/screens/screen_splash_cadastro_atualizado.dart';
 import 'package:pet_adote/screens/screen_splash_fin_cadastro.dart';
@@ -34,6 +36,8 @@ void main() {
         '/atualizarcontato': (context) => Atualizar_cadastro(),
         '/splashatualizado': (context) => Splash_atualizado(),
         '/creditos': (context) => Creditos(),
+        '/perfilpet': (context) => Perfil_Pet(),
+        '/filtros': (context) => Screen_Filtros(),
       },
     ),
   );

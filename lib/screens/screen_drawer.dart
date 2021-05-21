@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pet_adote/screens/screen_cadastro_pet.dart';
-import 'package:pet_adote/screens/screen_login.dart';
 
 class CustomDrawer extends StatelessWidget {
   @override
@@ -69,7 +67,7 @@ class CustomDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.contacts),
             title: Text(
-              "Atualizar contatos e endereço",
+              "Atualizar perfil",
               style: TextStyle(fontFamily: 'KGred'),
             ),
             onTap: () {

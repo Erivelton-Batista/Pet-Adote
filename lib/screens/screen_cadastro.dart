@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pet_adote/screens/screen_cadastro_end.dart';
 
 //Screen da tela de cadastro  de numero 7 e 8 do prototipo
 
@@ -16,10 +15,10 @@ class _CadastroState extends State<Cadastro> {
         centerTitle: true,
         //barra da tela cadastro
         title: Text(
-          'Cadastro',
+          'Cadastro de usuário',
           style: TextStyle(
             fontFamily: 'KGred',
-            fontSize: 40,
+            fontSize: 26,
             color: Colors.orangeAccent,
           ),
         ),
