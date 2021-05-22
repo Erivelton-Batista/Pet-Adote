@@ -52,7 +52,7 @@ class _Splash_atualizadoState extends State<Splash_atualizado> {
   void initState() {
     super.initState();
 
-    Future.delayed(Duration(seconds: 5)).then((_) {
+    Future.delayed(Duration(seconds: 3)).then((_) {
       Navigator.pushNamedAndRemoveUntil(
           context, '/homescreen', (route) => false);
     });

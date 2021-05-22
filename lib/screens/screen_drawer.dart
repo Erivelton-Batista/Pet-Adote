@@ -31,11 +31,11 @@ class CustomDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.person),
             title: Text(
-              "Seu perfil",
+              "Meu perfil",
               style: TextStyle(fontFamily: 'KGred'),
             ),
             onTap: () {
-              Navigator.pushNamed(context, 'routeName');
+              Navigator.pushNamed(context, '/perfil');
             },
           ),
 
@@ -43,11 +43,11 @@ class CustomDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.favorite),
             title: Text(
-              "Suas doações",
+              "Minhas doações",
               style: TextStyle(fontFamily: 'KGred'),
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.pushNamed(context, '/doaçoes');
             },
           ),
 

@@ -42,7 +42,7 @@ class _SplashHomeState extends State<SplashHome> {
   void initState() {
     super.initState();
 
-    Future.delayed(Duration(seconds: 5)).then((_) {
+    Future.delayed(Duration(seconds: 2)).then((_) {
       Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
     });
   }

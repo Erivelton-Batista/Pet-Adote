@@ -53,7 +53,7 @@ class _Splash_CadastroState extends State<Splash_Cadastro> {
   void initState() {
     super.initState();
 
-    Future.delayed(Duration(seconds: 5)).then((_) {
+    Future.delayed(Duration(seconds: 3)).then((_) {
       Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
     });
   }

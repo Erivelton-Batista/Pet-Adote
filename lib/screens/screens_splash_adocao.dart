@@ -59,7 +59,7 @@ class _Splash_adocaoState extends State<Splash_adocao> {
   void initState() {
     super.initState();
 
-    Future.delayed(Duration(seconds: 5)).then((_) {
+    Future.delayed(Duration(seconds: 3)).then((_) {
       Navigator.pushNamedAndRemoveUntil(
           context, '/homescreen', (route) => false);
     });

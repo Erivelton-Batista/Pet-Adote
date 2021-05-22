@@ -8,11 +8,13 @@ import 'package:pet_adote/screens/screen_creditos.dart';
 import 'package:pet_adote/screens/screen_filtros.dart';
 import 'package:pet_adote/screens/screen_login.dart';
 import 'package:pet_adote/screens/screen_perfil_pet.dart';
+import 'package:pet_adote/screens/screen_perfil_usuario.dart';
 import 'package:pet_adote/screens/screen_recuperar_senha.dart';
 import 'package:pet_adote/screens/screen_splash_cadastro_atualizado.dart';
 import 'package:pet_adote/screens/screen_splash_fin_cadastro.dart';
 import 'package:pet_adote/screens/screen_splash_inicial.dart';
 import 'package:pet_adote/screens/screen_splash_recuperar_senha.dart';
+import 'package:pet_adote/screens/screen_suas_doa%C3%A7%C3%B5es.dart';
 import 'package:pet_adote/screens/screen_termos_de_uso.dart';
 import 'package:pet_adote/screens/screens_splash_adocao.dart';
 
@@ -38,6 +40,8 @@ void main() {
         '/creditos': (context) => Creditos(),
         '/perfilpet': (context) => Perfil_Pet(),
         '/filtros': (context) => Screen_Filtros(),
+        '/doaçoes': (context) => Screen_Doacoes(),
+        '/perfil': (context) => Perfil_Usuario(),
       },
     ),
   );

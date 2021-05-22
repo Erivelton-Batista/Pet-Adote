@@ -181,7 +181,7 @@ class _Perfil_PetState extends State<Perfil_Pet> {
               ),
 
               //icone com quem é o doador
-              Row(
+              Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
@@ -202,32 +202,34 @@ class _Perfil_PetState extends State<Perfil_Pet> {
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 10, top: 5),
-                    child: RichText(
-                      text: TextSpan(
-                        children: const <TextSpan>[
-                          //Texto de doador
-                          TextSpan(
-                            text: 'Doador: ',
-                            style: TextStyle(
-                              fontFamily: 'KGred',
-                              fontSize: 15,
-                              color: Colors.orange,
+                    child: Center(
+                      child: RichText(
+                        text: TextSpan(
+                          children: const <TextSpan>[
+                            //Texto de doador
+                            TextSpan(
+                              text: 'Doador: ',
+                              style: TextStyle(
+                                fontFamily: 'KGred',
+                                fontSize: 15,
+                                color: Colors.orange,
+                              ),
                             ),
-                          ),
 
-                          //aqui sera o que vai vir do banco a especie do cachorro
-                          TextSpan(
-                            text: 'Hugo\n',
-                            style: TextStyle(
-                              fontFamily: 'KGred',
-                              fontSize: 15,
-                              color: Colors.black,
+                            //aqui sera o que vai vir do banco a especie do cachorro
+                            TextSpan(
+                              text: 'Marcones Lira da Silva Santos figueira\n',
+                              style: TextStyle(
+                                fontFamily: 'KGred',
+                                fontSize: 15,
+                                color: Colors.black,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
 
@@ -237,7 +239,7 @@ class _Perfil_PetState extends State<Perfil_Pet> {
                   Container(
                     margin: EdgeInsets.only(top: 15),
                     child: Text(
-                      "Descrição do pet",
+                      "Informações adicionais",
                       style: TextStyle(
                         fontFamily: 'KGred',
                         fontWeight: FontWeight.w200,
@@ -247,6 +249,7 @@ class _Perfil_PetState extends State<Perfil_Pet> {
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 10),
+                    padding: EdgeInsets.all(5),
                     width: 300,
                     height: 120,
                     decoration: BoxDecoration(
@@ -254,11 +257,19 @@ class _Perfil_PetState extends State<Perfil_Pet> {
                       border: Border.all(),
                       borderRadius: BorderRadius.circular(5),
                     ),
+
+                    ///texto das informaçoes adicionais
+                    child: Text(
+                      'informaçoes',
+                      style: TextStyle(
+                        fontFamily: 'KGred',
+                      ),
+                    ),
                   ),
 
                   //botao quero adotar
                   Container(
-                    width: 300,
+                    width: 250,
                     height: 100,
                     margin: EdgeInsets.only(top: 20),
                     alignment: Alignment.center,
@@ -281,12 +292,12 @@ class _Perfil_PetState extends State<Perfil_Pet> {
                             ),
                           ),
                           Container(
-                            child: SizedBox(
-                              child: Image.asset("assets/img/cão_caixa.png"),
-                              height: 45,
-                              width: 45,
+                            child: Image.asset(
+                              "assets/img/whatsapp.png",
+                              height: 30,
+                              width: 30,
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),

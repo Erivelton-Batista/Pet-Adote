@@ -16,20 +16,32 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Image.asset('assets/img/logo_app_pet_name.png', height: 60),
         toolbarHeight: 70,
         backgroundColor: Color(0xff2be0b5),
+
+        ///botao de filtros
+        actions: <Widget>[
+          FlatButton.icon(
+            onPressed: () {
+              Navigator.pushNamed(context, '/filtros');
+            },
+            icon: Icon(
+              Icons.filter_alt,
+              color: Color(0xfff48d8a),
+            ),
+            label: Text(
+              'Filtro',
+              style: TextStyle(
+                fontFamily: 'KGred',
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
+                color: Color(0xfff48d8a),
+              ),
+            ),
+          ),
+        ],
       ),
 
       //Janela lateral - Drawer
       drawer: CustomDrawer(),
-
-      //Botão flutuante dos filtros
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          Navigator.pushNamed(context, '/filtros');
-        },
-        label: const Text('Filtro'),
-        icon: const Icon(Icons.filter_alt),
-        backgroundColor: Color(0xff2be0b5),
-      ),
 
       //Tela de Anúncios dos Pets
       body: Animal_List(),

@@ -53,7 +53,7 @@ class _Splash_recupera_senhaState extends State<Splash_recupera_senha> {
   void initState() {
     super.initState();
 
-    Future.delayed(Duration(seconds: 5)).then((_) {
+    Future.delayed(Duration(seconds: 3)).then((_) {
       Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
     });
   }

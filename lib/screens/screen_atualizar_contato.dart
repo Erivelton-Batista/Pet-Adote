@@ -112,9 +112,21 @@ class _Atualizar_cadastroState extends State<Atualizar_cadastro> {
                   labelStyle: TextStyle(color: Colors.black, fontSize: 15),
                 ),
               ),
+
+              //Form de senha
+              TextFormField(
+                autofocus: false,
+                obscureText: true,
+                keyboardType: TextInputType.text,
+                style: new TextStyle(color: Colors.black, fontSize: 15),
+                decoration: InputDecoration(
+                  labelText: "Nova senha",
+                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+                ),
+              ),
               Divider(),
 
-              //Botao Cadastrar
+              //Botao Atualizar
               ButtonTheme(
                 height: 50.0,
                 child: RaisedButton(
