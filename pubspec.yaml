@@ -63,6 +63,8 @@ flutter:
     - assets/img/cachorro_gato.png
     - assets/img/gato.png
     - assets/img/whatsapp.png
+    - assets/img/logo_ads.png
+    - assets/img/logo_uninassau.png
     
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

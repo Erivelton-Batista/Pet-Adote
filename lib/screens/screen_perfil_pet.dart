@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'screen_anuncios.dart';
 
 class Perfil_Pet extends StatefulWidget {
@@ -11,16 +10,21 @@ class _Perfil_PetState extends State<Perfil_Pet> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //appbar
       appBar: AppBar(
         centerTitle: true,
         title: Image.asset('assets/img/logo_app_pet_name.png', height: 60),
         toolbarHeight: 70,
         backgroundColor: Color(0xff2be0b5),
       ),
+
+      //body
       body: ListView(
         children: [
           Column(
             children: <Widget>[
+              //
+              //container com a foto do perfil do pet
               Container(
                 margin: EdgeInsets.only(
                   right: 110,
@@ -47,17 +51,21 @@ class _Perfil_PetState extends State<Perfil_Pet> {
                               shape: BoxShape.circle,
                               image: DecorationImage(
                                   fit: BoxFit.cover,
+                                  //url com a foto do pet
                                   image: NetworkImage(
                                       "https://www.clubeparacachorros.com.br/wp-content/uploads/2018/05/filhote-golden-correndo.jpg"))),
                         ),
                       ],
                     ),
+
+                    //container com o nome do pet
                     Container(
                       padding: EdgeInsets.all(5),
                       decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: Border.all(),
-                          borderRadius: BorderRadius.circular(5)),
+                        color: Colors.white,
+                        border: Border.all(),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
                       child: Text(
                         "12345678901",
                         style: TextStyle(
@@ -70,9 +78,13 @@ class _Perfil_PetState extends State<Perfil_Pet> {
                   ],
                 ),
               ),
+
+              //size box para dar espaço ente a descrição e a foto do pet
               SizedBox(
                 height: 20,
               ),
+
+              //container de descrição do pet
               Container(
                 alignment: Alignment.topCenter,
                 child: RichText(
@@ -194,12 +206,14 @@ class _Perfil_PetState extends State<Perfil_Pet> {
                       shape: BoxShape.circle,
                       image: DecorationImage(
                         fit: BoxFit.cover,
+                        //imagem do perfil do dono
                         image: NetworkImage(
                           "https://www.clubeparacachorros.com.br/wp-content/uploads/2018/05/filhote-golden-correndo.jpg",
                         ),
                       ),
                     ),
                   ),
+                  //container com nome do doador
                   Container(
                     margin: EdgeInsets.only(left: 10, top: 5),
                     child: Center(
@@ -275,6 +289,8 @@ class _Perfil_PetState extends State<Perfil_Pet> {
                     alignment: Alignment.center,
                     child: RaisedButton(
                       color: Color(0xff2be0b5),
+                      //ação do botao
+                      //aqui tem que levar pro whatsapp, agr esta retornando para homescreen
                       onPressed: () => {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
                             builder: (context) => HomeScreen())),

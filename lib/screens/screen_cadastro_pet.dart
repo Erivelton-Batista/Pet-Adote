@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pet_adote/screens/screen_drawer.dart';
-import 'package:pet_adote/screens/screen_anuncios.dart';
 
 class Cadastropet extends StatefulWidget {
   @override
@@ -25,9 +23,6 @@ class _CadastropetState extends State<Cadastropet> {
         backgroundColor: Color(0xff2be0b5),
         toolbarHeight: 70,
       ),
-
-      //drawer com o menu
-      //drawer: CustomDrawer(),
 
       //body cadastro com container
       body: Container(
@@ -56,11 +51,12 @@ class _CadastropetState extends State<Cadastropet> {
                 ),
                 ////// ATENÇÂO LIMITEM ESSE CAMPO A DIGITAR NO MAXIMO 11 DIGITOS PARA QUE NAO OCORRA UM BUG NO PERFIL DO PET
                 decoration: InputDecoration(
-                    labelText: "Nome",
-                    labelStyle: TextStyle(
-                      color: Colors.black,
-                      fontSize: 15,
-                    )),
+                  labelText: "Nome",
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
+                ),
               ),
 
               //Form de Especie

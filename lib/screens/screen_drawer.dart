@@ -9,8 +9,10 @@ class CustomDrawer extends StatelessWidget {
         children: <Widget>[
           //perfil do usuario
           UserAccountsDrawerHeader(
+            //nome do usuario
             accountName: Text("Seu nome",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+            //login do usuario
             accountEmail: Text("user@mail.com",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             //imagem de fundo

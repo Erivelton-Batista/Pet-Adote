@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:pet_adote/screens/screen_anuncios.dart';
 import 'package:pet_adote/screens/screen_atualizar_contato.dart';
 import 'package:pet_adote/screens/screen_cadastro.dart';
@@ -19,9 +20,15 @@ import 'package:pet_adote/screens/screen_termos_de_uso.dart';
 import 'package:pet_adote/screens/screens_splash_adocao.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
-      title: 'Named Routes Demo',
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+    return MaterialApp(
+      title: 'Rotas Pet adote',
       initialRoute: '/',
       routes: {
         '/': (context) => SplashHome(),
@@ -43,16 +50,6 @@ void main() {
         '/doaçoes': (context) => Screen_Doacoes(),
         '/perfil': (context) => Perfil_Usuario(),
       },
-    ),
-  );
+    );
+  }
 }
-
-//class MyApp extends StatelessWidget {
- // @override
- // Widget build(BuildContext context) {
-  //  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  //  return MaterialApp(
-   //   home: SplashHome(),
- //   );
- // }
-//}

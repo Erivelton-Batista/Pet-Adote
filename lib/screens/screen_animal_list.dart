@@ -19,11 +19,12 @@ class _Animal_ListState extends State<Animal_List> {
         ),
         itemBuilder: (context, index) {
           return InkWell(
+            //card do anuncio
             child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5),
                 side: BorderSide(
-                  width: 5.0,
+                  width: 3.5,
                   color: Color(0xff2be0b5),
                 ),
               ),
@@ -40,6 +41,7 @@ class _Animal_ListState extends State<Animal_List> {
                       shape: BoxShape.circle,
                       image: DecorationImage(
                         fit: BoxFit.cover,
+                        //imagem do anuncio
                         image: NetworkImage(
                             "https://www.clubeparacachorros.com.br/wp-content/uploads/2018/05/filhote-golden-correndo.jpg"),
                       ),
@@ -170,8 +172,11 @@ class _Animal_ListState extends State<Animal_List> {
                     height: 52,
                     child: RaisedButton(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5),
-                          side: BorderSide(color: Color(0xffeba947))),
+                        borderRadius: BorderRadius.circular(5),
+                        side: BorderSide(
+                          color: Color(0xffeba947),
+                        ),
+                      ),
                       color: Color(0xffeba947),
 
                       //ação do botao

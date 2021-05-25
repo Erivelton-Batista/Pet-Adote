@@ -24,6 +24,8 @@ class _Screen_DoacoesState extends State<Screen_Doacoes> {
         backgroundColor: Color(0xff2be0b5),
         toolbarHeight: 70,
       ),
+
+      //body
       //Container de todo o corpo da tela
       body: Container(
         //Coluna de todo corpo
@@ -125,6 +127,7 @@ class _Screen_DoacoesState extends State<Screen_Doacoes> {
                   childAspectRatio: 0.60,
                 ),
                 itemBuilder: (context, index) {
+                  //card
                   return InkWell(
                     //Card dos anuncios
                     child: Card(

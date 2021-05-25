@@ -9,6 +9,7 @@ class _Atualizar_cadastroState extends State<Atualizar_cadastro> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //appbar
       appBar: AppBar(
         centerTitle: true,
         //barra da tela cadastro
@@ -23,6 +24,7 @@ class _Atualizar_cadastroState extends State<Atualizar_cadastro> {
         backgroundColor: Color(0xff2be0b5),
         toolbarHeight: 70,
       ),
+
       //body cadastro com container
       body: Container(
         padding: EdgeInsets.only(

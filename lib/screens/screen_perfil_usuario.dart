@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'screen_anuncios.dart';
-
 class Perfil_Usuario extends StatefulWidget {
   @override
   _Perfil_UsuarioState createState() => _Perfil_UsuarioState();
@@ -11,12 +9,15 @@ class _Perfil_UsuarioState extends State<Perfil_Usuario> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //appbar
       appBar: AppBar(
         centerTitle: true,
         title: Image.asset('assets/img/logo_app_pet_name.png', height: 60),
         toolbarHeight: 70,
         backgroundColor: Color(0xff2be0b5),
       ),
+
+      //body
       body: ListView(
         children: [
           Column(
@@ -33,7 +34,10 @@ class _Perfil_UsuarioState extends State<Perfil_Usuario> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Container(
-                          margin: EdgeInsets.only(top: 10, bottom: 10),
+                          margin: EdgeInsets.only(
+                            top: 10,
+                            bottom: 10,
+                          ),
                           width: 140,
                           height: 140,
                           decoration: BoxDecoration(
@@ -52,10 +56,11 @@ class _Perfil_UsuarioState extends State<Perfil_Usuario> {
                       child: Text(
                         "Marcones Lira da Silva Santos Amorim",
                         style: TextStyle(
-                            fontFamily: 'KGred',
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
+                          fontFamily: 'KGred',
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ],

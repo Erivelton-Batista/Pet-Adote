@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flare_flutter/flare_actor.dart';
 import 'package:pet_adote/screens/loading.dart';
-import 'package:pet_adote/screens/screen_login.dart';
 
 class SplashHome extends StatefulWidget {
   @override
@@ -13,37 +11,46 @@ class _SplashHomeState extends State<SplashHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff2be0b5),
-      body: Column(children: <Widget>[
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Padding(padding: EdgeInsets.only(top: 180)),
-            //foto do icone
-            Center(
-              child: Container(
-                height: 250,
-                width: 250,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                  image: AssetImage("assets/img/logo_app_pet_name.png"),
-                  fit: BoxFit.contain,
-                )),
+      //coluna da tela
+      body: Column(
+        children: <Widget>[
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.only(top: 180),
               ),
-            ),
-            //loading do splash
-            Center(child: CustomLoading()),
-          ],
-        )
-      ]),
+              //foto do icone
+              Center(
+                child: Container(
+                  height: 250,
+                  width: 250,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/img/logo_app_pet_name.png"),
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ),
+              ),
+              //loading do splash
+              Center(child: CustomLoading()),
+            ],
+          )
+        ],
+      ),
     );
   }
 
+//função de passagem de pagina
   @override
   void initState() {
     super.initState();
 
-    Future.delayed(Duration(seconds: 2)).then((_) {
-      Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
-    });
+    Future.delayed(Duration(seconds: 2)).then(
+      (_) {
+        Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
+      },
+    );
   }
 }

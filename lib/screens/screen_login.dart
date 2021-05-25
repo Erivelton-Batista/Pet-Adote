@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pet_adote/screens/screen_anuncios.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -33,7 +32,9 @@ class Login extends StatelessWidget {
             //Form de Email
             TextFormField(
               keyboardType: TextInputType.emailAddress,
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(
+                fontSize: 20,
+              ),
               decoration: InputDecoration(
                 labelText: "E-mail",
                 labelStyle: TextStyle(
@@ -44,6 +45,8 @@ class Login extends StatelessWidget {
                 ),
               ),
             ),
+
+            //sizebox para dar espaço
             SizedBox(
               height: 10,
             ),
@@ -64,7 +67,7 @@ class Login extends StatelessWidget {
               ),
             ),
 
-            //Recuperar senha
+            //botao Recuperar senha
             Container(
               height: 50,
               alignment: Alignment.centerRight,
@@ -77,6 +80,7 @@ class Login extends StatelessWidget {
                     fontFamily: 'KGred',
                   ),
                 ),
+                //
                 //ação do botao
                 onPressed: () => {
                   Navigator.pushNamed(context, '/recuperarsenha'),
@@ -94,6 +98,7 @@ class Login extends StatelessWidget {
               height: 50.0,
               child: RaisedButton(
                 color: Color(0xff2be0b5),
+                //
                 //ação do botao
                 onPressed: () => {
                   Navigator.pushNamedAndRemoveUntil(
@@ -138,6 +143,7 @@ class Login extends StatelessWidget {
                     fontSize: 16,
                   ),
                 ),
+                //
                 //ação ao aperta o botao
                 onPressed: () => {
                   Navigator.pushNamed(context, '/cadastro'),

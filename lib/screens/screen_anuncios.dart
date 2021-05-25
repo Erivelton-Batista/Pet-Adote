@@ -11,15 +11,20 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //appbar
       appBar: AppBar(
         centerTitle: true,
-        title: Image.asset('assets/img/logo_app_pet_name.png', height: 60),
+        title: Image.asset(
+          'assets/img/logo_app_pet_name.png',
+          height: 60,
+        ),
         toolbarHeight: 70,
         backgroundColor: Color(0xff2be0b5),
 
         ///botao de filtros
         actions: <Widget>[
           FlatButton.icon(
+            //ação do botao filtros
             onPressed: () {
               Navigator.pushNamed(context, '/filtros');
             },

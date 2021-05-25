@@ -1,4 +1,3 @@
-import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:pet_adote/screens/loading.dart';
 
@@ -12,40 +11,48 @@ class _Splash_recupera_senhaState extends State<Splash_recupera_senha> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(children: <Widget>[
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Padding(padding: EdgeInsets.only(top: 100)),
-            //foto do icone
-            Center(
-              child: Container(
-                height: 250,
-                width: 250,
-                decoration: BoxDecoration(
+      //body da tela
+      body: Column(
+        children: <Widget>[
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.only(top: 100),
+              ),
+              //foto do icone
+              Center(
+                child: Container(
+                  height: 250,
+                  width: 250,
+                  decoration: BoxDecoration(
                     image: DecorationImage(
-                  image: AssetImage("assets/img/recuperar_senha.png"),
-                  fit: BoxFit.contain,
-                )),
-              ),
-            ),
-            Center(
-              child: Text(
-                "Sua Senha foi enviada\n"
-                "para o e-mail cadastrado\n",
-                style: TextStyle(
-                  fontFamily: 'KGred',
-                  fontSize: 20,
-                  color: Colors.orangeAccent,
+                      image: AssetImage("assets/img/recuperar_senha.png"),
+                      fit: BoxFit.contain,
+                    ),
+                  ),
                 ),
-                textAlign: TextAlign.center,
               ),
-            ),
-            //loading do splash
-            Center(child: CustomLoading()),
-          ],
-        )
-      ]),
+              Center(
+                child: Text(
+                  "Sua Senha foi enviada\n"
+                  "para o e-mail cadastrado\n",
+                  style: TextStyle(
+                    fontFamily: 'KGred',
+                    fontSize: 20,
+                    color: Colors.orangeAccent,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              //loading do splash
+              Center(
+                child: CustomLoading(),
+              ),
+            ],
+          )
+        ],
+      ),
     );
   }
 

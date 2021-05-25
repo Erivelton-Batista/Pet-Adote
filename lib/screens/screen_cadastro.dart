@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-//Screen da tela de cadastro  de numero 7 e 8 do prototipo
-
 class Cadastro extends StatefulWidget {
   @override
   _CadastroState createState() => _CadastroState();
@@ -25,6 +23,7 @@ class _CadastroState extends State<Cadastro> {
         backgroundColor: Color(0xff2be0b5),
         toolbarHeight: 70,
       ),
+
       //body cadastro com container
       body: Container(
         padding: EdgeInsets.only(
@@ -46,20 +45,33 @@ class _CadastroState extends State<Cadastro> {
               TextFormField(
                 autofocus: false,
                 keyboardType: TextInputType.text,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
+                style: new TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
                 decoration: InputDecoration(
-                    labelText: "Nome completo",
-                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
+                  labelText: "Nome completo",
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
+                ),
               ),
 
               //Form de CPF
               TextFormField(
                 autofocus: false,
                 keyboardType: TextInputType.number,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
+                style: new TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
                 decoration: InputDecoration(
                   labelText: "CPF",
-                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
                 ),
               ),
 
@@ -67,10 +79,16 @@ class _CadastroState extends State<Cadastro> {
               TextFormField(
                 autofocus: false,
                 keyboardType: TextInputType.number,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
+                style: new TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
                 decoration: InputDecoration(
                   labelText: "Telefone (Whatsapp)",
-                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
                 ),
               ),
 
@@ -78,10 +96,16 @@ class _CadastroState extends State<Cadastro> {
               TextFormField(
                 autofocus: false,
                 keyboardType: TextInputType.text,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
+                style: new TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
                 decoration: InputDecoration(
                   labelText: "E-mail",
-                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
                 ),
               ),
 
@@ -90,10 +114,16 @@ class _CadastroState extends State<Cadastro> {
                 autofocus: false,
                 obscureText: true,
                 keyboardType: TextInputType.text,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
+                style: new TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
                 decoration: InputDecoration(
                   labelText: "Senha",
-                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
                 ),
               ),
 
@@ -102,10 +132,16 @@ class _CadastroState extends State<Cadastro> {
                 autofocus: false,
                 obscureText: true,
                 keyboardType: TextInputType.text,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
+                style: new TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
                 decoration: InputDecoration(
                   labelText: "Repetir senha",
-                  labelStyle: TextStyle(color: Colors.black, fontSize: 15),
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
                 ),
               ),
               Divider(),
@@ -115,6 +151,7 @@ class _CadastroState extends State<Cadastro> {
                 height: 50.0,
                 child: RaisedButton(
                   color: Color(0xff2be0b5),
+                  //
                   //ação ao apertar o botao
                   onPressed: () => {
                     Navigator.pushNamed(context, '/cadastro2'),

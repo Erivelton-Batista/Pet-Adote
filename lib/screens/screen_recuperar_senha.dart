@@ -65,7 +65,7 @@ class _Recuperar_senhaState extends State<Recuperar_senha> {
               height: 370,
             ),
 
-            //Botao Recuperar Senha
+            //Botão Recuperar Senha
             ButtonTheme(
               height: 50.0,
               child: RaisedButton(

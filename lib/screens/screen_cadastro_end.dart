@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pet_adote/screens/screen_splash_fin_cadastro.dart';
 
 class Cadastro_end extends StatefulWidget {
   @override
@@ -9,7 +8,6 @@ class Cadastro_end extends StatefulWidget {
 class _Cadastro_endState extends State<Cadastro_end> {
 //variavel do checkbox para verificação
   bool _sel = false;
-//mascara do campo CEP
 
   @override
   Widget build(BuildContext context) {
@@ -40,69 +38,112 @@ class _Cadastro_endState extends State<Cadastro_end> {
         child: Center(
           child: ListView(
             children: <Widget>[
+              //
               //Form de Estado
               TextFormField(
                 autofocus: false,
                 keyboardType: TextInputType.text,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
+                style: new TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
                 decoration: InputDecoration(
-                    labelText: "Estado",
-                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
+                  labelText: "Estado",
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
+                ),
               ),
 
               //Form de Cidade
               TextFormField(
                 autofocus: false,
                 keyboardType: TextInputType.text,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
+                style: new TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
                 decoration: InputDecoration(
-                    labelText: "Cidade",
-                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
+                  labelText: "Cidade",
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
+                ),
               ),
 
               //Form de Bairro
               TextFormField(
                 autofocus: false,
                 keyboardType: TextInputType.text,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
+                style: new TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
                 decoration: InputDecoration(
-                    labelText: "Bairro",
-                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
+                  labelText: "Bairro",
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
+                ),
               ),
 
               //Form de Rua
               TextFormField(
                 autofocus: false,
                 keyboardType: TextInputType.text,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
+                style: new TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
                 decoration: InputDecoration(
-                    labelText: "Rua",
-                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
+                  labelText: "Rua",
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
+                ),
               ),
 
               //Form de Número da casa
               TextFormField(
                 autofocus: false,
                 keyboardType: TextInputType.number,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
+                style: new TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
                 decoration: InputDecoration(
-                    labelText: "Número",
-                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
+                  labelText: "Número",
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
+                ),
               ),
 
               //Form de CEP
               TextFormField(
                 autofocus: false,
                 keyboardType: TextInputType.number,
-                style: new TextStyle(color: Colors.black, fontSize: 15),
+                style: new TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
                 decoration: InputDecoration(
-                    labelText: "CEP",
-                    labelStyle: TextStyle(color: Colors.black, fontSize: 15)),
+                  labelText: "CEP",
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                  ),
+                ),
               ),
 
               Divider(),
 
-              //botao e checkbox
+              //botao termos de uso
               Row(
                 children: <Widget>[
                   ButtonTheme(
@@ -142,6 +183,7 @@ class _Cadastro_endState extends State<Cadastro_end> {
                 height: 50.0,
                 child: RaisedButton(
                   color: Color(0xff2be0b5),
+                  //ação do botao cadastrar
                   onPressed: () => {
                     Navigator.pushReplacementNamed(context, '/splashcadastro'),
                   },

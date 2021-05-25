@@ -11,13 +11,18 @@ class _Screen_FiltrosState extends State<Screen_Filtros> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        //appbar de filtros
         appBar: AppBar(
           centerTitle: true,
           title: Image.asset('assets/img/logo_app_pet_name.png', height: 60),
           toolbarHeight: 70,
           backgroundColor: Color(0xff2be0b5),
         ),
+
+        //cor do body
         backgroundColor: Color(0xffffb6c1),
+
+        //body
         body: Container(
           color: Color(0xfff48d8a),
           padding: EdgeInsets.only(top: 20),
@@ -50,48 +55,65 @@ class _Screen_FiltrosState extends State<Screen_Filtros> {
               SizedBox(
                 height: 20,
               ),
+
               // Container para o TextForm de Estado
               Container(
-                  margin: EdgeInsets.symmetric(horizontal: 40),
-                  child: TextFormField(
-                    keyboardType: TextInputType.text,
-                    style: TextStyle(fontSize: 20),
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        labelText: "Estado",
-                        labelStyle: TextStyle(
-                          color: Colors.black54,
-                          fontWeight: FontWeight.w400,
-                          fontSize: 20,
-                          fontFamily: 'KGred',
-                        )),
-                  )),
+                margin: EdgeInsets.symmetric(
+                  horizontal: 40,
+                ),
+                child: TextFormField(
+                  keyboardType: TextInputType.text,
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    labelText: "Estado",
+                    labelStyle: TextStyle(
+                      color: Colors.black54,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 20,
+                      fontFamily: 'KGred',
+                    ),
+                  ),
+                ),
+              ),
+
               //Espaçamento
               SizedBox(
                 height: 20,
               ),
+
               //Segundo Container para o TextForm Cidade
               Container(
-                  margin: EdgeInsets.symmetric(horizontal: 40),
-                  child: TextFormField(
-                    keyboardType: TextInputType.text,
-                    style: TextStyle(fontSize: 20),
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        labelText: "Cidade",
-                        labelStyle: TextStyle(
-                          color: Colors.black54,
-                          fontWeight: FontWeight.w400,
-                          fontSize: 20,
-                          fontFamily: 'KGred',
-                        )),
-                  )),
+                margin: EdgeInsets.symmetric(
+                  horizontal: 40,
+                ),
+                child: TextFormField(
+                  keyboardType: TextInputType.text,
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    labelText: "Cidade",
+                    labelStyle: TextStyle(
+                      color: Colors.black54,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 20,
+                      fontFamily: 'KGred',
+                    ),
+                  ),
+                ),
+              ),
+
               //Espaçamento
               SizedBox(
                 height: 20,
               ),
+
               //Início do DropDownButton
               // Primeiro DropDown - Espécie
               Container(
@@ -102,71 +124,95 @@ class _Screen_FiltrosState extends State<Screen_Filtros> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Column(children: <Widget>[
-                          Text(
-                            "Espécie",
-                            style: TextStyle(
-                                fontFamily: 'KGred',
-                                color: Colors.white,
-                                fontSize: 15),
-                          ),
-                          //Container para definir o backgroundcolor do DropDownButton
-                          Container(
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(4))),
-                            margin: EdgeInsets.only(top: 10),
-                            padding: EdgeInsets.only(
-                                top: 0, left: 10, right: 10, bottom: 0),
-                            child: DropdownButton<String>(
-                              value: dropdownValue,
-                              style: TextStyle(color: Color(0xff2be0b5)),
-                              underline: Container(
-                                height: 2,
-                                color: Color(0xff2be0b5),
-                              ),
-                              dropdownColor: Colors.white,
-                              onChanged: (String newValue) {
-                                setState(() {
-                                  dropdownValue = newValue;
-                                });
-                              },
-                              items: <String>[
-                                'One',
-                                'Two',
-                                'Three',
-                                'Four'
-                              ].map<DropdownMenuItem<String>>((String value) {
-                                return DropdownMenuItem<String>(
-                                  value: value,
-                                  child: Text(value),
-                                );
-                              }).toList(),
+                        Column(
+                          children: <Widget>[
+                            Text(
+                              "Espécie",
+                              style: TextStyle(
+                                  fontFamily: 'KGred',
+                                  color: Colors.white,
+                                  fontSize: 15),
                             ),
-                          ),
-                        ]),
+                            //Container para definir o backgroundcolor do DropDownButton
+                            Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(4),
+                                ),
+                              ),
+                              margin: EdgeInsets.only(
+                                top: 10,
+                              ),
+                              padding: EdgeInsets.only(
+                                top: 0,
+                                left: 10,
+                                right: 10,
+                                bottom: 0,
+                              ),
+                              child: DropdownButton<String>(
+                                value: dropdownValue,
+                                style: TextStyle(
+                                  color: Color(0xff2be0b5),
+                                ),
+                                underline: Container(
+                                  height: 2,
+                                  color: Color(0xff2be0b5),
+                                ),
+                                dropdownColor: Colors.white,
+                                onChanged: (String newValue) {
+                                  setState(() {
+                                    dropdownValue = newValue;
+                                  });
+                                },
+                                items: <String>[
+                                  'One',
+                                  'Two',
+                                  'Three',
+                                  'Four'
+                                ].map<DropdownMenuItem<String>>((String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(value),
+                                  );
+                                }).toList(),
+                              ),
+                            ),
+                          ],
+                        ),
+
                         //Segundo DropDown - Cor
                         Column(
                           children: <Widget>[
                             Text(
                               "Cor",
                               style: TextStyle(
-                                  fontFamily: 'KGred',
-                                  color: Colors.white,
-                                  fontSize: 15),
+                                fontFamily: 'KGred',
+                                color: Colors.white,
+                                fontSize: 15,
+                              ),
                             ),
                             Container(
                               decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(4))),
-                              margin: EdgeInsets.only(top: 10),
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(4),
+                                ),
+                              ),
+                              margin: EdgeInsets.only(
+                                top: 10,
+                              ),
                               padding: EdgeInsets.only(
-                                  top: 0, left: 10, right: 10, bottom: 0),
+                                top: 0,
+                                left: 10,
+                                right: 10,
+                                bottom: 0,
+                              ),
                               child: DropdownButton<String>(
                                 value: dropdownValue,
-                                style: TextStyle(color: Color(0xff2be0b5)),
+                                style: TextStyle(
+                                  color: Color(0xff2be0b5),
+                                ),
                                 underline: Container(
                                   height: 2,
                                   color: Color(0xff2be0b5),
@@ -191,27 +237,39 @@ class _Screen_FiltrosState extends State<Screen_Filtros> {
                             )
                           ],
                         ),
+
                         //Terceiro DropDown - Raça
                         Column(
                           children: <Widget>[
                             Text(
                               "Raça",
                               style: TextStyle(
-                                  fontFamily: 'KGred',
-                                  color: Colors.white,
-                                  fontSize: 15),
+                                fontFamily: 'KGred',
+                                color: Colors.white,
+                                fontSize: 15,
+                              ),
                             ),
                             Container(
                               decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(4))),
-                              margin: EdgeInsets.only(top: 10),
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(4),
+                                ),
+                              ),
+                              margin: EdgeInsets.only(
+                                top: 10,
+                              ),
                               padding: EdgeInsets.only(
-                                  top: 0, left: 10, right: 10, bottom: 0),
+                                top: 0,
+                                left: 10,
+                                right: 10,
+                                bottom: 0,
+                              ),
                               child: DropdownButton<String>(
                                 value: dropdownValue,
-                                style: TextStyle(color: Color(0xff2be0b5)),
+                                style: TextStyle(
+                                  color: Color(0xff2be0b5),
+                                ),
                                 underline: Container(
                                   height: 2,
                                   color: Color(0xff2be0b5),
@@ -238,77 +296,106 @@ class _Screen_FiltrosState extends State<Screen_Filtros> {
                         ),
                       ],
                     ),
+
+                    //sizebox para espaçamento
                     SizedBox(
                       height: 20,
                     ),
+
+                    //primeiro DropDown - sexo
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Column(children: <Widget>[
-                          Text(
-                            "Sexo",
-                            style: TextStyle(
+                        Column(
+                          children: <Widget>[
+                            Text(
+                              "Sexo",
+                              style: TextStyle(
                                 fontFamily: 'KGred',
                                 color: Colors.white,
-                                fontSize: 15),
-                          ),
-                          //Container para definir o backgroundcolor do DropDownButton
-                          Container(
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(4))),
-                            margin: EdgeInsets.only(top: 10),
-                            padding: EdgeInsets.only(
-                                top: 0, left: 10, right: 10, bottom: 0),
-                            child: DropdownButton<String>(
-                              value: dropdownValue,
-                              style: TextStyle(color: Color(0xff2be0b5)),
-                              underline: Container(
-                                height: 2,
-                                color: Color(0xff2be0b5),
+                                fontSize: 15,
                               ),
-                              dropdownColor: Colors.white,
-                              onChanged: (String newValue) {
-                                setState(() {
-                                  dropdownValue = newValue;
-                                });
-                              },
-                              items: <String>[
-                                'One',
-                                'Two',
-                                'Three',
-                                'Four'
-                              ].map<DropdownMenuItem<String>>((String value) {
-                                return DropdownMenuItem<String>(
-                                  value: value,
-                                  child: Text(value),
-                                );
-                              }).toList(),
                             ),
-                          ),
-                        ]),
-                        //Segundo DropDown - Cor
+                            //Container para definir o backgroundcolor do DropDownButton
+                            Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(4),
+                                ),
+                              ),
+                              margin: EdgeInsets.only(
+                                top: 10,
+                              ),
+                              padding: EdgeInsets.only(
+                                top: 0,
+                                left: 10,
+                                right: 10,
+                                bottom: 0,
+                              ),
+                              child: DropdownButton<String>(
+                                value: dropdownValue,
+                                style: TextStyle(
+                                  color: Color(0xff2be0b5),
+                                ),
+                                underline: Container(
+                                  height: 2,
+                                  color: Color(0xff2be0b5),
+                                ),
+                                dropdownColor: Colors.white,
+                                onChanged: (String newValue) {
+                                  setState(() {
+                                    dropdownValue = newValue;
+                                  });
+                                },
+                                items: <String>[
+                                  'One',
+                                  'Two',
+                                  'Three',
+                                  'Four'
+                                ].map<DropdownMenuItem<String>>((String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(value),
+                                  );
+                                }).toList(),
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        //Segundo DropDown - porte
                         Column(
                           children: <Widget>[
                             Text(
                               "Porte",
                               style: TextStyle(
-                                  fontFamily: 'KGred',
-                                  color: Colors.white,
-                                  fontSize: 15),
+                                fontFamily: 'KGred',
+                                color: Colors.white,
+                                fontSize: 15,
+                              ),
                             ),
                             Container(
                               decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(4))),
-                              margin: EdgeInsets.only(top: 10),
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(4),
+                                ),
+                              ),
+                              margin: EdgeInsets.only(
+                                top: 10,
+                              ),
                               padding: EdgeInsets.only(
-                                  top: 0, left: 10, right: 10, bottom: 0),
+                                top: 0,
+                                left: 10,
+                                right: 10,
+                                bottom: 0,
+                              ),
                               child: DropdownButton<String>(
                                 value: dropdownValue,
-                                style: TextStyle(color: Color(0xff2be0b5)),
+                                style: TextStyle(
+                                  color: Color(0xff2be0b5),
+                                ),
                                 underline: Container(
                                   height: 2,
                                   color: Color(0xff2be0b5),
@@ -333,27 +420,39 @@ class _Screen_FiltrosState extends State<Screen_Filtros> {
                             )
                           ],
                         ),
-                        //Terceiro DropDown - Raça
+
+                        //Terceiro DropDown - idade
                         Column(
                           children: <Widget>[
                             Text(
                               "Idade",
                               style: TextStyle(
-                                  fontFamily: 'KGred',
-                                  color: Colors.white,
-                                  fontSize: 15),
+                                fontFamily: 'KGred',
+                                color: Colors.white,
+                                fontSize: 15,
+                              ),
                             ),
                             Container(
                               decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(4))),
-                              margin: EdgeInsets.only(top: 10),
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(4),
+                                ),
+                              ),
+                              margin: EdgeInsets.only(
+                                top: 10,
+                              ),
                               padding: EdgeInsets.only(
-                                  top: 0, left: 10, right: 10, bottom: 0),
+                                top: 0,
+                                left: 10,
+                                right: 10,
+                                bottom: 0,
+                              ),
                               child: DropdownButton<String>(
                                 value: dropdownValue,
-                                style: TextStyle(color: Color(0xff2be0b5)),
+                                style: TextStyle(
+                                  color: Color(0xff2be0b5),
+                                ),
                                 underline: Container(
                                   height: 2,
                                   color: Color(0xff2be0b5),
@@ -380,6 +479,7 @@ class _Screen_FiltrosState extends State<Screen_Filtros> {
                         ),
                       ],
                     ),
+
                     //Botão para buscar os filtros selecionados
                     Container(
                       width: 250,
@@ -387,8 +487,9 @@ class _Screen_FiltrosState extends State<Screen_Filtros> {
                       height: 50,
                       child: RaisedButton(
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5.0),
-                            side: BorderSide(color: Colors.black)),
+                          borderRadius: BorderRadius.circular(5.0),
+                          side: BorderSide(color: Colors.black),
+                        ),
                         color: Colors.orangeAccent,
                         //Ação do botão
                         onPressed: () => {
